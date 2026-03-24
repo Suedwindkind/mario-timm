@@ -1,26 +1,68 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maurer- und Sanierungsarbeiten</title>
+	
     <style>
-        body { margin:0; font-family: Arial, sans-serif; color:#333; }
-        header { background:#2E3A45; color:white; padding:40px 20px; text-align:center; }
-        header h1 { margin:0; font-size:32px; }
-        header p { margin:10px 0; font-size:18px; }
-        section { padding:50px 20px; max-width:900px; margin:auto; }
-        h2 { text-align:center; margin-bottom:20px; color:#2E3A45; }
-        .leistungen ul { list-style:none; padding:0; }
-        .leistungen li { padding:10px 0; border-bottom:1px solid #ddd; }
-        .galerie { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:15px; }
-        .galerie img { width:100%; border-radius:5px; object-fit:cover; }
-        .kontakt { text-align:center; }
-        footer { background:#2E3A45; color:white; text-align:center; padding:20px; margin-top:40px; }
-        a.button { background:#2E3A45; color:white; padding:12px 20px; border-radius:6px; text-decoration:none; display:inline-block; }
+    /* Neue Navigationsleiste */
+    nav {
+        position: fixed;      /* Leiste bleibt beim Scrollen sichtbar */
+        top: 0;
+        width: 100%;
+        background: #2E3A45;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;        /* immer oben */
+    }
+
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Platz für die feste Leiste */
+    body { 
+        margin:0; 
+        font-family: Arial, sans-serif; 
+        color:#333; 
+        padding-top: 60px;  /* damit der Header nicht von der Leiste überlappt wird */
+    }
+
+    /* Bestehende Styles */
+    header { background:#2E3A45; color:white; padding:40px 20px; text-align:center; }
+    header h1 { margin:0; font-size:32px; }
+    header p { margin:10px 0; font-size:18px; }
+    section { padding:50px 20px; max-width:900px; margin:auto; }
+    h2 { text-align:center; margin-bottom:20px; color:#2E3A45; }
+    .leistungen ul { list-style:none; padding:0; }
+    .leistungen li { padding:10px 0; border-bottom:1px solid #ddd; }
+    .galerie { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:15px; }
+    .galerie img { width:100%; border-radius:5px; object-fit:cover; }
+    .kontakt { text-align:center; }
+    footer { background:#2E3A45; color:white; text-align:center; padding:20px; margin-top:40px; }
+    a.button { background:#2E3A45; color:white; padding:12px 20px; border-radius:6px; text-decoration:none; display:inline-block; }
     </style>
 </head>
 <body>
+
+<nav>
+  <a href="#ueber">Über mich</a>
+  <a href="#leistungen">Leistungen</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
+
 
 <header>
     <h1>Maurer- und Sanierungsarbeiten Mario Timm</h1>
