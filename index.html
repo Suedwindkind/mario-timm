@@ -83,8 +83,19 @@
 
 	/* Smartphone */
 	@media (max-width: 500px) {
-    .galerie {
-        grid-template-columns: 1fr;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5px;
+        text-align: unset;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 13px;
+        flex: 1;
+        text-align: center;
     }
 	}
     .kontakt { text-align:center; }
