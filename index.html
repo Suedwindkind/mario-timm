@@ -47,8 +47,44 @@
     h2 { text-align:center; margin-bottom:20px; color:#2E3A45; }
     .leistungen ul { list-style:none; padding:0; }
     .leistungen li { padding:10px 0; border-bottom:1px solid #ddd; }
-    .galerie { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:15px; }
-    .galerie img { width:100%; border-radius:5px; object-fit:cover; }
+	.galerie {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+	}
+
+	.galerie-item {
+    overflow: hidden;
+    border-radius: 8px;
+	}
+
+	.galerie img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+	}
+
+	/* Hover-Effekt (Desktop) */
+	.galerie-item:hover img {
+    transform: scale(1.08);
+	}
+
+	/* Tablet */
+	@media (max-width: 900px) {
+    .galerie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+	}
+
+	/* Smartphone */
+	@media (max-width: 500px) {
+    .galerie {
+        grid-template-columns: 1fr;
+    }
+	}
     .kontakt { text-align:center; }
     footer { background:#2E3A45; color:white; text-align:center; padding:20px; margin-top:40px; }
     a.button { background:#2E3A45; color:white; padding:12px 20px; border-radius:6px; text-decoration:none; display:inline-block; }
@@ -93,8 +129,24 @@
 
 <section id="arbeiten">
     <h2>Einblicke in meine Arbeit</h2>
+
     <div class="galerie">
-        <img src="bilder/platzhalter.jpg" alt="Arbeitsbeispiel">
+        <div class="galerie-item"><img src="bilder/arbeit-1.jpg" alt="Arbeit 1"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-2.jpg" alt="Arbeit 2"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-3.jpg" alt="Arbeit 3"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-4.jpg" alt="Arbeit 4"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-5.jpg" alt="Arbeit 5"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-6.jpg" alt="Arbeit 6"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-7.jpg" alt="Arbeit 7"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-8.jpg" alt="Arbeit 8"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-9.jpg" alt="Arbeit 9"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-10.jpg" alt="Arbeit 10"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-11.jpg" alt="Arbeit 11"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-12.jpg" alt="Arbeit 12"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-13.jpg" alt="Arbeit 13"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-14.jpg" alt="Arbeit 14"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-15.jpg" alt="Arbeit 15"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-16.jpg" alt="Arbeit 16"></div>
     </div>
 </section>
 
