@@ -9,12 +9,14 @@
 nav {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     background: #2E3A45;
     text-align: center;
     padding: 10px 0;
-    align-items: center;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 nav a {
@@ -33,14 +35,15 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
-    padding-top: 60px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 1.6;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 40px;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 20px 40px 20px;
+    box-sizing: border-box;
 }
 
 h1, h2 {
@@ -71,6 +74,10 @@ a:hover {
         flex: 1;
         text-align: center;
     }
+
+    .container {
+        padding: 80px 16px 30px 16px;
+    }
 }
 </style>
 </head>
@@ -84,114 +91,116 @@ a:hover {
   <a href="index.html#kontakt">Kontakt</a>
 </nav>
 
-<h1>Datenschutzerklärung</h1>
+<div class="container">
+  <h1>Datenschutzerklärung</h1>
 
-<p>
-Ich freue mich über Ihren Besuch auf meiner Website. Der Schutz Ihrer personenbezogenen Daten ist mir ein wichtiges Anliegen.
-</p>
+  <p>
+  Ich freue mich über Ihren Besuch auf meiner Website. Der Schutz Ihrer personenbezogenen Daten ist mir ein wichtiges Anliegen.
+  </p>
 
-<h2>1. Verantwortliche Stelle</h2>
+  <h2>1. Verantwortliche Stelle</h2>
 
-<p>
-Mario Timm<br>
-Maurer- und Sanierungsarbeiten<br>
-Am Felde 2<br>
-25436 Tornesch<br>
-Telefon: 0173 533 9895<br>
-E-Mail: timmmario@yahoo.de
-</p>
+  <p>
+  Mario Timm<br>
+  Maurer- und Sanierungsarbeiten<br>
+  Am Felde 2<br>
+  25436 Tornesch<br>
+  Telefon: 0173 533 9895<br>
+  E-Mail: timmmario@yahoo.de
+  </p>
 
-<h2>2. Zugriffsdaten (Server-Logfiles)</h2>
+  <h2>2. Zugriffsdaten (Server-Logfiles)</h2>
 
-<p>
-Beim Besuch meiner Website werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen (sogenannte Server-Logfiles) beinhalten etwa:
-</p>
+  <p>
+  Beim Besuch meiner Website werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen (sogenannte Server-Logfiles) beinhalten etwa:
+  </p>
 
-<ul>
-<li>IP-Adresse</li>
-<li>Datum und Uhrzeit des Zugriffs</li>
-<li>aufgerufene Seite</li>
-<li>verwendeter Browser und Betriebssystem</li>
-</ul>
+  <ul>
+  <li>IP-Adresse</li>
+  <li>Datum und Uhrzeit des Zugriffs</li>
+  <li>aufgerufene Seite</li>
+  <li>verwendeter Browser und Betriebssystem</li>
+  </ul>
 
-<p>
-Diese Daten können nicht bestimmten Personen zugeordnet werden und dienen ausschließlich der technischen Bereitstellung und Optimierung der Website.
-</p>
+  <p>
+  Diese Daten können nicht bestimmten Personen zugeordnet werden und dienen ausschließlich der technischen Bereitstellung und Optimierung der Website.
+  </p>
 
-<h2>3. Kontaktaufnahme</h2>
+  <h2>3. Kontaktaufnahme</h2>
 
-<p>
-Wenn Sie mich per Telefon, E-Mail oder WhatsApp kontaktieren, werden die von Ihnen übermittelten Daten gespeichert, um Ihre Anfrage zu bearbeiten.
-</p>
+  <p>
+  Wenn Sie mich per Telefon, E-Mail oder WhatsApp kontaktieren, werden die von Ihnen übermittelten Daten gespeichert, um Ihre Anfrage zu bearbeiten.
+  </p>
 
-<p>
-Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht weitergegeben.
-</p>
+  <p>
+  Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht weitergegeben.
+  </p>
 
-<h2>4. WhatsApp</h2>
+  <h2>4. WhatsApp</h2>
 
-<p>
-Wenn Sie mich über WhatsApp kontaktieren, erfolgt die Kommunikation über den Anbieter WhatsApp Ireland Limited.
-</p>
+  <p>
+  Wenn Sie mich über WhatsApp kontaktieren, erfolgt die Kommunikation über den Anbieter WhatsApp Ireland Limited.
+  </p>
 
-<p>
-Es kann nicht ausgeschlossen werden, dass Daten auch an Server außerhalb der Europäischen Union übertragen werden.
-</p>
+  <p>
+  Es kann nicht ausgeschlossen werden, dass Daten auch an Server außerhalb der Europäischen Union übertragen werden.
+  </p>
 
-<p>
-Bitte nutzen Sie WhatsApp nur, wenn Sie damit einverstanden sind.
-</p>
+  <p>
+  Bitte nutzen Sie WhatsApp nur, wenn Sie damit einverstanden sind.
+  </p>
 
-<h2>5. Cookies und Analyse-Tools</h2>
+  <h2>5. Cookies und Analyse-Tools</h2>
 
-<p>
-Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb der Seite erforderlich sind.<br>
-Diese Cookies speichern keine personenbezogenen Daten und bedürfen keiner Einwilligung.
-</p>
+  <p>
+  Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb der Seite erforderlich sind.<br>
+  Diese Cookies speichern keine personenbezogenen Daten und bedürfen keiner Einwilligung.
+  </p>
 
-<p>
-Darüber hinaus werden keine Analyse-Tools (z. B. Google Analytics) eingesetzt.
-</p>
+  <p>
+  Darüber hinaus werden keine Analyse-Tools (z. B. Google Analytics) eingesetzt.
+  </p>
 
-<h2>6. Ihre Rechte</h2>
+  <h2>6. Ihre Rechte</h2>
 
-<p>Sie haben jederzeit das Recht auf:</p>
+  <p>Sie haben jederzeit das Recht auf:</p>
 
-<ul>
-<li>Auskunft über Ihre gespeicherten Daten</li>
-<li>Berichtigung</li>
-<li>Löschung</li>
-<li>Einschränkung der Verarbeitung</li>
-<li>Datenübertragbarkeit</li>
-<li>Widerspruch gegen die Verarbeitung</li>
-</ul>
+  <ul>
+  <li>Auskunft über Ihre gespeicherten Daten</li>
+  <li>Berichtigung</li>
+  <li>Löschung</li>
+  <li>Einschränkung der Verarbeitung</li>
+  <li>Datenübertragbarkeit</li>
+  <li>Widerspruch gegen die Verarbeitung</li>
+  </ul>
 
-<p>
-Hierzu können Sie mich jederzeit unter der oben angegebenen E-Mail-Adresse kontaktieren.
-</p>
+  <p>
+  Hierzu können Sie mich jederzeit unter der oben angegebenen E-Mail-Adresse kontaktieren.
+  </p>
 
-<h2>7. Sicherheit</h2>
+  <h2>7. Sicherheit</h2>
 
-<p>
-Ich behandle Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
-</p>
+  <p>
+  Ich behandle Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+  </p>
 
-<p>
-Die Nutzung dieser Website ist in der Regel ohne Angabe personenbezogener Daten möglich.<br>
-Personenbezogene Daten werden nur erhoben, wenn Sie mich aktiv kontaktieren (z. B. per Telefon, E-Mail oder WhatsApp).<br>
-Diese Daten werden vertraulich behandelt und nur im Rahmen der gesetzlichen Vorschriften verarbeitet.
-</p>
+  <p>
+  Die Nutzung dieser Website ist in der Regel ohne Angabe personenbezogener Daten möglich.<br>
+  Personenbezogene Daten werden nur erhoben, wenn Sie mich aktiv kontaktieren (z. B. per Telefon, E-Mail oder WhatsApp).<br>
+  Diese Daten werden vertraulich behandelt und nur im Rahmen der gesetzlichen Vorschriften verarbeitet.
+  </p>
 
-<p>
-Bitte beachten Sie, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein vollständiger Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
-</p>
+  <p>
+  Bitte beachten Sie, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein vollständiger Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+  </p>
 
-<p>
-Diese Website nutzt aus Sicherheitsgründen eine SSL-Verschlüsselung.
-Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers mit „https://“ beginnt und an dem Schloss-Symbol in Ihrer Browserzeile.
-</p>
+  <p>
+  Diese Website nutzt aus Sicherheitsgründen eine SSL-Verschlüsselung.
+  Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers mit „https://“ beginnt und an dem Schloss-Symbol in Ihrer Browserzeile.
+  </p>
 
-<p><a href="index.html">← Zurück zur Startseite</a></p>
+  <p><a href="index.html">← Zurück zur Startseite</a></p>
+</div>
 
 </body>
 </html>
