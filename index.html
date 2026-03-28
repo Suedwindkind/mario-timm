@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maurer-, Reparatur- & Sanierungsarbeiten</title>
-	
+
     <style>
     /* Neue Navigationsleiste */
     nav {
@@ -14,19 +12,18 @@
         top: 0;
         width: 100%;
         background: #2E3A45;
-		text-align: center;
-		padding: 10px 0;
-        align-items: center;
+        text-align: center;
         padding: 10px 0;
+        align-items: center;
         z-index: 1000;        /* immer oben */
     }
 
     nav a {
         color: white;
-		margin: 0 15px;
-		text-decoration: none;
-		font-weight: bold;
-		font-size: 16px;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
     }
 
     nav a:hover {
@@ -35,9 +32,9 @@
 
     /* Platz für die feste Leiste */
     body { 
-        margin:0; 
+        margin: 0; 
         font-family: Arial, sans-serif; 
-        color:#333; 
+        color: #333; 
         padding-top: 60px;  /* damit der Header nicht von der Leiste überlappt wird */
     }
 
@@ -49,58 +46,84 @@
     h2 { text-align:center; margin-bottom:20px; color:#2E3A45; }
     .leistungen ul { list-style:none; padding:0; }
     .leistungen li { padding:10px 0; border-bottom:1px solid #ddd; }
-	.galerie {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin-top: 30px;
-	}
 
-	.galerie-item {
-    overflow: hidden;
-    border-radius: 8px;
-	}
-
-	.galerie img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-	}
-
-	/* Hover-Effekt (Desktop) */
-	.galerie-item:hover img {
-    transform: scale(1.08);
-	}
-
-	/* Tablet */
-	@media (max-width: 900px) {
     .galerie {
-        grid-template-columns: repeat(2, 1fr);
-    }
-	}
-
-	/* Smartphone */
-	@media (max-width: 500px) {
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 5px;
-        text-align: unset;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin-top: 30px;
     }
 
-    nav a {
-        margin: 0;
-        font-size: 13px;
-        flex: 1;
-        text-align: center;
+    .galerie-item {
+        overflow: hidden;
+        border-radius: 8px;
     }
-	}
+
+    .galerie img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* Hover-Effekt (Desktop) */
+    .galerie-item:hover img {
+        transform: scale(1.08);
+    }
+
+    /* Tablet */
+    @media (max-width: 900px) {
+        .galerie {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* Smartphone */
+    @media (max-width: 500px) {
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5px;
+            text-align: unset;
+        }
+
+        nav a {
+            margin: 0;
+            font-size: 13px;
+            flex: 1;
+            text-align: center;
+        }
+    }
+
     .kontakt { text-align:center; }
-    footer { background:#2E3A45; color:white; text-align:center; padding:20px; margin-top:40px; }
-    a.button { background:#2E3A45; color:white; padding:12px 20px; border-radius:6px; text-decoration:none; display:inline-block; }
+
+    footer { 
+        background:#2E3A45; 
+        color:white; 
+        text-align:center; 
+        padding:20px; 
+        margin-top:40px; 
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    a.button { 
+        background:#2E3A45; 
+        color:white; 
+        padding:12px 20px; 
+        border-radius:6px; 
+        text-decoration:none; 
+        display:inline-block; 
+    }
     </style>
 </head>
 <body>
@@ -111,7 +134,6 @@
   <a href="#arbeiten">Arbeiten</a>
   <a href="#kontakt">Kontakt</a>
 </nav>
-
 
 <header>
     <h1>Maurer- und Sanierungsarbeiten Mario Timm</h1>
@@ -172,8 +194,8 @@
 
 <footer>
     <p>© 2026 Maurerbetrieb Mario Timm ·
-		<a href="datenschutz.html">Datenschutz</a>
-	</p>
+        <a href="datenschutz.html">Datenschutz</a>
+    </p>
 </footer>
 
 </body>
