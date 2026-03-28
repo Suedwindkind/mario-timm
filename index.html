@@ -6,16 +6,15 @@
     <title>Maurer-, Reparatur- & Sanierungsarbeiten</title>
 
     <style>
-    /* Neue Navigationsleiste */
     nav {
-        position: fixed;      /* Leiste bleibt beim Scrollen sichtbar */
+        position: fixed;
         top: 0;
         width: 100%;
         background: #2E3A45;
         text-align: center;
         padding: 10px 0;
         align-items: center;
-        z-index: 1000;        /* immer oben */
+        z-index: 1000;
     }
 
     nav a {
@@ -30,22 +29,51 @@
         text-decoration: underline;
     }
 
-    /* Platz für die feste Leiste */
-    body { 
-        margin: 0; 
-        font-family: Arial, sans-serif; 
-        color: #333; 
-        padding-top: 60px;  /* damit der Header nicht von der Leiste überlappt wird */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #333;
+        padding-top: 60px;
     }
 
-    /* Bestehende Styles */
-    header { background:#2E3A45; color:white; padding:40px 20px; text-align:center; }
-    header h1 { margin:0; font-size:32px; }
-    header p { margin:10px 0; font-size:18px; }
-    section { padding:50px 20px; max-width:900px; margin:auto; }
-    h2 { text-align:center; margin-bottom:20px; color:#2E3A45; }
-    .leistungen ul { list-style:none; padding:0; }
-    .leistungen li { padding:10px 0; border-bottom:1px solid #ddd; }
+    header {
+        background: #2E3A45;
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 32px;
+    }
+
+    header p {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    section {
+        padding: 50px 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #2E3A45;
+    }
+
+    .leistungen ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .leistungen li {
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
 
     .galerie {
         display: grid;
@@ -67,19 +95,46 @@
         transition: transform 0.3s ease;
     }
 
-    /* Hover-Effekt (Desktop) */
     .galerie-item:hover img {
         transform: scale(1.08);
     }
 
-    /* Tablet */
+    .kontakt {
+        text-align: center;
+    }
+
+    footer {
+        background: #2E3A45;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    a.button {
+        background: #2E3A45;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
     @media (max-width: 900px) {
         .galerie {
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
-    /* Smartphone */
     @media (max-width: 500px) {
         nav {
             display: flex;
@@ -96,43 +151,15 @@
             text-align: center;
         }
     }
-
-    .kontakt { text-align:center; }
-
-    footer { 
-        background:#2E3A45; 
-        color:white; 
-        text-align:center; 
-        padding:20px; 
-        margin-top:40px; 
-    }
-
-    footer a {
-        color: white;
-        text-decoration: none;
-    }
-
-    footer a:hover {
-        text-decoration: underline;
-    }
-
-    a.button { 
-        background:#2E3A45; 
-        color:white; 
-        padding:12px 20px; 
-        border-radius:6px; 
-        text-decoration:none; 
-        display:inline-block; 
-    }
     </style>
 </head>
 <body>
 
 <nav>
-  <a href="#ueber">Über mich</a>
-  <a href="#leistungen">Leistungen</a>
-  <a href="#arbeiten">Arbeiten</a>
-  <a href="#kontakt">Kontakt</a>
+    <a href="#ueber">Über mich</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#arbeiten">Arbeiten</a>
+    <a href="#kontakt">Kontakt</a>
 </nav>
 
 <header>
@@ -144,7 +171,7 @@
 <section id="ueber">
     <h2>Über mich</h2>
     <p>
-        Ich bin Mario Timm, Maurermeister mit über 15 Jahren Erfahrung in Sanierung, Rohbau 
+        Ich bin Mario Timm, Maurermeister mit über 15 Jahren Erfahrung in Sanierung, Rohbau
         und Modernisierung. Qualität ist für mich wichtig. Ich arbeite zuverlässig, professionell und mit einem hohen Anspruch
         an Qualität – für Privatkunden, Hausverwaltungen und kleine Unternehmen in Tornesch und Umgebung.
     </p>
@@ -193,9 +220,7 @@
 </section>
 
 <footer>
-    <p>© 2026 Maurerbetrieb Mario Timm ·
-        <a href="datenschutz.html">Datenschutz</a>
-    </p>
+    <p>© 2026 Maurerbetrieb Mario Timm · <a href="datenschutz.html">Datenschutz</a></p>
 </footer>
 
 </body>
