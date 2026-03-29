@@ -6,17 +6,21 @@
 <title>Datenschutzerklärung</title>
 
 <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
 nav {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
     width: 100%;
     background: #2E3A45;
     text-align: center;
     padding: 10px 0;
     z-index: 1000;
-    box-sizing: border-box;
 }
 
 nav a {
@@ -29,14 +33,6 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
-    padding: 0;
 }
 
 .container {
@@ -57,6 +53,37 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+footer {
+    background: #2E3A45;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer .credits {
+    color: #56B8B2;
+    font-size: 14px;
+}
+
+a.button {
+    background: #2E3A45;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 @media (max-width: 500px) {
@@ -201,6 +228,15 @@ a:hover {
 
   <p><a href="index.html">← Zurück zur Startseite</a></p>
 </div>
+
+<footer>
+  <p>
+    © 2026 Maurerbetrieb Mario Timm · 
+    <a href="impressum.html">Impressum</a> · 
+    <a href="datenschutz.html">Datenschutz</a> · 
+    <span class="credits">Website by S. Kreckler</span>
+  </p>
+</footer>
 
 </body>
 </html>
