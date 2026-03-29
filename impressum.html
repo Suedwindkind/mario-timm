@@ -72,6 +72,11 @@ footer a {
     text-decoration: underline;
 }
 
+footer .credits {
+		color: #56B8B2;
+		font-size: 14px;
+}
+
 a.button {
     background: #2E3A45;
     color: white;
@@ -116,7 +121,7 @@ a.button {
 <div class="container">
   <h1>Impressum</h1>
 
-  <h2>Angaben gemäß § 5 TMG</h2>
+  <h2>Angaben gemäß § 5 DDG</h2>
 
   <p>
   Mario Timm<br>
@@ -132,11 +137,12 @@ a.button {
   E-Mail: timmmario@yahoo.de
   </p>
 
-  <h2><font color="red">Umsatzsteuer-ID</h2>
+  <h2><font color="red">Umsatzsteuer-ID</font></h2>
 
   <p>
-  Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
-  DEXXXXXXXXX -> Klären, ob eine USt-ID vorliegt. Wenn nicht, diesen Part komplett löschen.</font>
+  <font color="red">Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+  DEXXXXXXXXX -> Klären, ob eine USt-ID vorliegt. Wenn nicht, diesen gesamten Block komplett löschen.
+  </font>
   </p>
 
   <h2>Verbraucherstreitbeilegung</h2>
@@ -167,7 +173,12 @@ a.button {
 </div>
 
 <footer>
-  <p>© 2026 Maurerbetrieb Mario Timm · <a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a></p>
+  <p>
+    © 2026 Maurerbetrieb Mario Timm · 
+    <a href="impressum.html">Impressum</a> · 
+    <a href="datenschutz.html">Datenschutz</a> · 
+    <span class="credits">Website by S. Kreckler</span>
+  </p>
 </footer>
 
 </body>
