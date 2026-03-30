@@ -32,6 +32,7 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
+        letter-spacing: 0.2px;
         color: #333;
         padding-top: 60px;
     }
@@ -56,13 +57,14 @@
     }
 
     header h1 {
+        font-size: clamp(20px, 4vw, 26px);
+        line-height: 1.2;
         margin: 8px 0 4px 0;
-        font-size: 32px;
     }
 
     header p {
+        font-size: clamp(14px, 2.5vw, 18px);
         margin: 6px 0 12px 0;
-        font-size: 18px;
     }
 
     section {
@@ -71,9 +73,15 @@
         margin: auto;
     }
 
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
     h2 {
         text-align: center;
-        margin-bottom: 20px;
+        font-size: clamp(20px, 3vw, 24px);
+        margin-bottom: 18px;
         color: #2E3A45;
     }
 
