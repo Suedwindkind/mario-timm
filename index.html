@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maurerbetrieb Mario Timm – Sanierung & Reparatur in Tornesch & Umgebung</title>
+    <title>Maurer-, Reparatur- & Sanierungsarbeiten</title>
 
     <style>
     nav {
@@ -59,7 +59,7 @@
     header h1 {
         font-size: clamp(20px, 4vw, 26px);
         line-height: 1.2;
-        margin: 8px 0 8px 0;
+        margin: 8px 0 4px 0;
     }
 
     header p {
@@ -141,9 +141,8 @@
     }
 
     footer .credits {
-        color: #8FA3AD;
-        font-size: 13px;
-		margin-top: 8px;
+        color: #56B8B2;
+        font-size: 14px;
     }
 
     a.button {
@@ -153,13 +152,48 @@
         border-radius: 6px;
         text-decoration: none;
         display: inline-block;
-		margin-top: 24px;
-		margin-bottom: 20px;
+    }
+
+
+    .ueber-mit-bild {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+    }
+
+    .ueber-text {
+        flex: 1;
+    }
+
+    .ueber-bild {
+        flex: 0 0 280px;
+    }
+
+    .ueber-bild img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
     }
 
     @media (max-width: 900px) {
         .galerie {
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        .ueber-mit-bild {
+            gap: 24px;
+        }
+
+        .ueber-bild {
+            flex: 0 0 220px;
+        }
+
+        .ueber-bild img {
+            max-width: 220px;
         }
     }
 
@@ -183,6 +217,21 @@
             font-size: 18px;
             line-height: 1.2;
         }
+
+        .ueber-mit-bild {
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .ueber-bild {
+            flex: none;
+            width: 100%;
+        }
+
+        .ueber-bild img {
+            max-width: 220px;
+        }
     }
     </style>
 </head>
@@ -201,16 +250,21 @@
     </div>
 
     <h1>Zuverlässig · Professionell · Regional</h1>
-    <a class="button" href="tel:01735339895" style="background:white;color:#2E3A45;"><svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#d40000" d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24c1.12.37 2.33.57 3.59.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.26.2 2.47.57 3.59a1 1 0 0 1-.24 1l-2.21 2.2Z"/></svg>Jetzt anrufen</a>
+    <a class="button" href="tel:01735339895">📞 Jetzt anrufen</a>
 </header>
 
-<section id="ueber">
-    <h2>Über mich</h2>
-    <p>
-        Ich bin Mario Timm, Maurermeister mit über 15 Jahren Erfahrung in Sanierung, Rohbau
-        und Modernisierung. Qualität ist für mich wichtig. Ich arbeite zuverlässig, professionell und mit einem hohen Anspruch
-        an Qualität – für Privatkunden, Hausverwaltungen und kleine Unternehmen in Tornesch und Umgebung.
-    </p>
+<section id="ueber" class="ueber-mit-bild">
+    <div class="ueber-text">
+        <h2>Über mich</h2>
+        <p>
+            Ich bin Mario Timm, Maurermeister mit über 15 Jahren Erfahrung in Sanierung, Rohbau
+            und Modernisierung. Qualität ist für mich wichtig. Ich arbeite zuverlässig, professionell und mit einem hohen Anspruch
+            an Qualität – für Privatkunden, Hausverwaltungen und kleine Unternehmen in Tornesch und Umgebung.
+        </p>
+    </div>
+    <div class="ueber-bild">
+        <img src="bilder/mario-sw.png" alt="Mario Timm bei der Arbeit">
+    </div>
 </section>
 
 <section id="leistungen" class="leistungen">
@@ -250,37 +304,17 @@
 
 <section id="kontakt" class="kontakt">
     <h2>Kontakt</h2>
-
-    <p>
-        <svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#d40000" d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24c1.12.37 2.33.57 3.59.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.26.2 2.47.57 3.59a1 1 0 0 1-.24 1l-2.21 2.2Z"/>
-        </svg>
-        Telefon: 0173 533 9895
-    </p>
-
-    <p>
-        <svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#2E3A45" d="M20 4H4a2 2 0 0 0-2 2v.01L12 13l10-6.99V6a2 2 0 0 0-2-2Zm0 4.24L12 15 4 8.24V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.24Z"/>
-        </svg>
-        E-Mail: timmmario@yahoo.de
-    </p>
-
-    <a class="button" href="https://wa.me/491735339895">
-        <svg viewBox="0 0 32 32" width="18" height="18" style="vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#25D366" d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.89.756 5.606 2.073 7.97L0 32l7.854-2.058A15.92 15.92 0 0 0 16 32c8.836 0 16-7.164 16-16.396C32 7.56 24.836.396 16 .396Zm0 29.09c-2.566 0-5.064-.69-7.23-1.995l-.518-.308-4.66 1.22 1.245-4.54-.336-.524A13.44 13.44 0 0 1 2.56 16.396C2.56 8.88 8.484 2.956 16 2.956s13.44 5.924 13.44 13.44-5.924 13.44-13.44 13.44Zm7.36-9.98c-.402-.2-2.38-1.176-2.75-1.31-.37-.134-.64-.2-.91.2-.268.402-1.044 1.31-1.28 1.58-.236.268-.47.302-.87.1-.402-.2-1.7-.626-3.24-1.994-1.198-1.066-2.006-2.382-2.24-2.784-.236-.402-.025-.62.177-.82.18-.178.402-.47.604-.704.2-.236.268-.402.402-.67.134-.268.067-.502-.033-.704-.1-.2-.91-2.196-1.246-3.01-.327-.785-.66-.678-.91-.69l-.78-.014c-.268 0-.704.1-1.072.502-.37.402-1.41 1.378-1.41 3.356 0 1.978 1.444 3.888 1.646 4.156.2.268 2.844 4.344 6.892 6.09.964.416 1.716.664 2.304.85.968.308 1.85.264 2.546.16.776-.116 2.38-.972 2.714-1.91.336-.938.336-1.744.236-1.91-.1-.166-.37-.268-.772-.47Z"/>
-        </svg>
-        WhatsApp schreiben
-    </a>
+    <p>📞 Telefon: 0173 533 9895</p>
+    <p>📧 E-Mail: timmmario@yahoo.de</p>
+    <a class="button" href="https://wa.me/491735339895">💬 WhatsApp schreiben</a>
 </section>
 
 <footer>
   <p>
     © 2026 Maurerbetrieb Mario Timm · 
     <a href="impressum.html">Impressum</a> · 
-    <a href="datenschutz.html">Datenschutz</a>
-  </p>
-  <p class="credits">
-    Webdesign: S. Kreckler
+    <a href="datenschutz.html">Datenschutz</a> · 
+    <span class="credits">Website by S. Kreckler</span>
   </p>
 </footer>
 
