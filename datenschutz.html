@@ -3,42 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Datenschutzerklärung</title>
+<title>Datenschutzerklärung von Mario Timm</title>
 
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    letter-spacing: 0.2px;
     color: #333;
     line-height: 1.6;
+    padding-top: 60px;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #2E3A45;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 1000;
-}
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #2E3A45;
+        text-align: center;
+        padding: 10px 0;
+        align-items: center;
+        z-index: 1000;
+		line-height: 1.15;
+    }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-}
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
 
-nav a:hover {
-    text-decoration: underline;
-}
+    nav a:hover {
+        text-decoration: underline;
+    }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 80px 20px 40px 20px;
+    padding: 20px 20px 40px 20px;
     box-sizing: border-box;
 }
 
@@ -86,24 +90,24 @@ a.button {
     display: inline-block;
 }
 
-@media (max-width: 500px) {
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 5px;
-        text-align: unset;
-    }
+    @media (max-width: 500px) {
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5px;
+            text-align: unset;
+        }
 
-    nav a {
-        margin: 0;
-        font-size: 13px;
-        flex: 1;
-        text-align: center;
-    }
+        nav a {
+            margin: 0;
+            font-size: 13px;
+            flex: 1;
+            text-align: center;
+        }
 
     .container {
-        padding: 80px 16px 30px 16px;
+        padding: 20px 16px 30px 16px;
     }
 }
 </style>
