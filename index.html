@@ -242,7 +242,19 @@
             line-height: 1.2;
         }
     }
-    </style>
+    
+    /* Divider (Mauer als Trennlinie) */
+    .section-divider{max-width:900px;margin:0 auto;padding:0 20px}
+    .section-divider.mauer{
+        height:70px;
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position:center;
+        opacity:.9;
+        background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 70'><g stroke='%239e9e9e' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='10' width='80' height='20' rx='4' fill='%23e3e3e3'/><rect x='95' y='10' width='80' height='20' rx='4' fill='%23e3e3e3'/><rect x='180' y='10' width='80' height='20' rx='4' fill='%23e3e3e3'/><rect x='265' y='10' width='80' height='20' rx='4' fill='%23e3e3e3'/><rect x='350' y='10' width='80' height='20' rx='4' fill='%23e3e3e3'/><rect x='435' y='10' width='80' height='20' rx='4' fill='%23e3e3e3'/><rect x='520' y='10' width='80' height='20' rx='4' fill='%23e3e3e3'/><rect x='605' y='10' width='80' height='20' rx='4' fill='%23e3e3e3'/><rect x='690' y='10' width='80' height='20' rx='4' fill='%23e3e3e3'/><rect x='775' y='10' width='80' height='20' rx='4' fill='%23e3e3e3'/><rect x='50' y='35' width='75' height='18' rx='4' fill='%23e3e3e3'/><rect x='130' y='35' width='80' height='18' rx='4' fill='%23e3e3e3'/><rect x='215' y='35' width='75' height='18' rx='4' fill='%23e3e3e3'/><rect x='295' y='35' width='80' height='18' rx='4' fill='%23e3e3e3'/><rect x='380' y='35' width='75' height='18' rx='4' fill='%23e3e3e3'/><rect x='460' y='35' width='80' height='18' rx='4' fill='%23e3e3e3'/><rect x='545' y='35' width='75' height='18' rx='4' fill='%23e3e3e3'/><rect x='625' y='35' width='80' height='18' rx='4' fill='%23e3e3e3'/><rect x='710' y='35' width='75' height='18' rx='4' fill='%23e3e3e3'/><path d='M40 18 l4 -2' stroke='%239e9e9e' opacity='0.4'/><path d='M300 20 l5 -2' stroke='%239e9e9e' opacity='0.4'/><path d='M600 18 l5 -2' stroke='%239e9e9e' opacity='0.4'/></g></svg>");
+    }
+
+</style>
 </head>
 <body>
 
@@ -276,6 +288,8 @@
     </div>
 </section>
 
+<div class="section-divider mauer"></div>
+
 <section id="leistungen" class="leistungen">
     <h2>Leistungen</h2>
     <ul>
@@ -287,6 +301,8 @@
         <li>Kellertrockenlegung (optional)</li>
     </ul>
 </section>
+
+<div class="section-divider mauer"></div>
 
 <section id="arbeiten">
     <h2>Einblicke in meine Arbeit</h2>
@@ -310,6 +326,8 @@
         <div class="galerie-item"><img src="bilder/arbeit-16.jpg" alt="Arbeit 16"></div>
     </div>
 </section>
+
+<div class="section-divider mauer"></div>
 
 <section id="kontakt" class="kontakt">
     <h2>Kontakt</h2>
