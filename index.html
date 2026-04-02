@@ -35,6 +35,10 @@
         letter-spacing: 0.2px;
         color: #333;
         padding-top: 60px;
+        background-color: #fafafa;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='120' viewBox='0 0 220 120'><g fill='none' stroke='%23ececec' stroke-width='1'><rect x='8' y='10' width='62' height='22' rx='4' fill='%23f9f9f9'/><rect x='78' y='10' width='62' height='22' rx='4' fill='%23f9f9f9'/><rect x='148' y='10' width='62' height='22' rx='4' fill='%23f9f9f9'/><rect x='43' y='40' width='62' height='20' rx='4' fill='%23f9f9f9'/><rect x='113' y='40' width='62' height='20' rx='4' fill='%23f9f9f9'/><rect x='8' y='68' width='62' height='22' rx='4' fill='%23f9f9f9'/><rect x='78' y='68' width='62' height='22' rx='4' fill='%23f9f9f9'/><rect x='148' y='68' width='62' height='22' rx='4' fill='%23f9f9f9'/><rect x='43' y='98' width='62' height='20' rx='4' fill='%23f9f9f9'/><rect x='113' y='98' width='62' height='20' rx='4' fill='%23f9f9f9'/></g></svg>");
+        background-size: 220px 120px;
+        background-repeat: repeat;
     }
 
     header {
@@ -242,27 +246,6 @@
             line-height: 1.2;
         }
     }
-
-    /* Divider (Mauer als Trennlinie) */
-    .section-divider {
-        width: calc(100% - 40px);
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .section-divider.mauer {
-        height: 70px;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-position: center;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 860 70'><g stroke='%23bdbdbd' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round'><rect x='0' y='10' width='78' height='20' rx='4' fill='%23f0f0f0'/><rect x='86' y='10' width='78' height='20' rx='4' fill='%23f0f0f0'/><rect x='172' y='10' width='78' height='20' rx='4' fill='%23f0f0f0'/><rect x='258' y='10' width='78' height='20' rx='4' fill='%23f0f0f0'/><rect x='344' y='10' width='78' height='20' rx='4' fill='%23f0f0f0'/><rect x='430' y='10' width='78' height='20' rx='4' fill='%23f0f0f0'/><rect x='516' y='10' width='78' height='20' rx='4' fill='%23f0f0f0'/><rect x='602' y='10' width='78' height='20' rx='4' fill='%23f0f0f0'/><rect x='688' y='10' width='78' height='20' rx='4' fill='%23f0f0f0'/><rect x='774' y='10' width='86' height='20' rx='4' fill='%23f0f0f0'/><rect x='0' y='36' width='72' height='18' rx='4' fill='%23f0f0f0'/><rect x='80' y='36' width='94' height='18' rx='4' fill='%23f0f0f0'/><rect x='182' y='36' width='82' height='18' rx='4' fill='%23f0f0f0'/><rect x='272' y='36' width='96' height='18' rx='4' fill='%23f0f0f0'/><rect x='376' y='36' width='86' height='18' rx='4' fill='%23f0f0f0'/><rect x='470' y='36' width='92' height='18' rx='4' fill='%23f0f0f0'/><rect x='570' y='36' width='80' height='18' rx='4' fill='%23f0f0f0'/><rect x='658' y='36' width='96' height='18' rx='4' fill='%23f0f0f0'/><rect x='762' y='36' width='98' height='18' rx='4' fill='%23f0f0f0'/><path d='M34 18 l4 -2' stroke='%23bdbdbd' opacity='0.4'/><path d='M292 20 l5 -2' stroke='%23bdbdbd' opacity='0.4'/><path d='M592 18 l5 -2' stroke='%23bdbdbd' opacity='0.4'/><path d='M112 44 l4 -2' stroke='%23bdbdbd' opacity='0.32'/><path d='M508 45 l5 -2' stroke='%23bdbdbd' opacity='0.32'/></g></svg>");
-    }
-
-    @media (max-width: 500px) {
-        .section-divider.mauer {
-            height: 56px;
-        }
-    }
     </style>
 </head>
 <body>
@@ -297,8 +280,6 @@
     </div>
 </section>
 
-<div class="section-divider mauer" aria-hidden="true"></div>
-
 <section id="leistungen" class="leistungen">
     <h2>Leistungen</h2>
     <ul>
@@ -310,8 +291,6 @@
         <li>Kellertrockenlegung (optional)</li>
     </ul>
 </section>
-
-<div class="section-divider mauer" aria-hidden="true"></div>
 
 <section id="arbeiten">
     <h2>Einblicke in meine Arbeit</h2>
@@ -335,8 +314,6 @@
         <div class="galerie-item"><img src="bilder/arbeit-16.jpg" alt="Arbeit 16"></div>
     </div>
 </section>
-
-<div class="section-divider mauer" aria-hidden="true"></div>
 
 <section id="kontakt" class="kontakt">
     <h2>Kontakt</h2>
