@@ -68,7 +68,7 @@
     }
 
     section {
-        padding: 50px 20px;
+        padding: 56px 20px;
         max-width: 900px;
         margin: auto;
     }
@@ -83,6 +83,55 @@
         font-size: clamp(20px, 3vw, 24px);
         margin-bottom: 18px;
         color: #2E3A45;
+    }
+
+    .section-divider {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .section-divider.mauer {
+        height: 34px;
+        position: relative;
+        opacity: 0.78;
+    }
+
+    .section-divider.mauer::before,
+    .section-divider.mauer::after {
+        content: "";
+        display: block;
+        height: 14px;
+        background:
+            linear-gradient(to right,
+                #d8d2c8 0 11%,
+                #c8c1b6 11% 12.2%,
+                #d8d2c8 12.2% 24%,
+                #c8c1b6 24% 25.2%,
+                #d8d2c8 25.2% 37%,
+                #c8c1b6 37% 38.2%,
+                #d8d2c8 38.2% 50%,
+                #c8c1b6 50% 51.2%,
+                #d8d2c8 51.2% 63%,
+                #c8c1b6 63% 64.2%,
+                #d8d2c8 64.2% 76%,
+                #c8c1b6 76% 77.2%,
+                #d8d2c8 77.2% 89%,
+                #c8c1b6 89% 90.2%,
+                #d8d2c8 90.2% 100%);
+        border-radius: 4px;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.35),
+                    0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .section-divider.mauer::before {
+        width: 100%;
+    }
+
+    .section-divider.mauer::after {
+        width: calc(100% - 36px);
+        margin-left: 36px;
+        margin-top: 6px;
     }
 
     .leistungen ul {
@@ -162,7 +211,7 @@
     footer .credits {
         color: #8FA3AD;
         font-size: 13px;
-		margin-top: 8px;
+        margin-top: 8px;
     }
 
     a.button {
@@ -172,11 +221,10 @@
         border-radius: 6px;
         text-decoration: none;
         display: inline-block;
-		margin-top: 24px;
-		margin-bottom: 20px;
+        margin-top: 24px;
+        margin-bottom: 20px;
     }
 
-    
     .ueber-mich-bild {
         display: flex;
         align-items: center;
@@ -198,14 +246,14 @@
         aspect-ratio: 3 / 4;
         object-fit: cover;
         object-position: center 10%;
-		transform: scale(1.03);
+        transform: scale(1.03);
         display: block;
         margin: 0 auto;
         border-radius: 10px;
-		box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     }
 
-@media (max-width: 900px) {
+    @media (max-width: 900px) {
         .galerie {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -241,6 +289,20 @@
             font-size: 18px;
             line-height: 1.2;
         }
+
+        .section-divider.mauer {
+            height: 28px;
+        }
+
+        .section-divider.mauer::before,
+        .section-divider.mauer::after {
+            height: 12px;
+        }
+
+        .section-divider.mauer::after {
+            width: calc(100% - 22px);
+            margin-left: 22px;
+        }
     }
     </style>
 </head>
@@ -267,14 +329,16 @@
         <h2>Über mich</h2>
         <p>
             Ich bin Mario Timm, Maurer mit über 25 Jahren Erfahrung in Sanierung und Modernisierung.
-			Qualität ist mir besonders wichtig. Ich arbeite mit einem hohen Anspruch an saubere und langlebige Ergebnisse –
-			für Privatkunden, Hausverwaltungen und kleine Unternehmen in Tornesch, Pinneberg und Umgebung.
+            Qualität ist mir besonders wichtig. Ich arbeite mit einem hohen Anspruch an saubere und langlebige Ergebnisse –
+            für Privatkunden, Hausverwaltungen und kleine Unternehmen in Tornesch, Pinneberg und Umgebung.
         </p>
     </div>
     <div class="ueber-bild">
         <img src="bilder/mario-sw.png" alt="Mario Timm bei der Arbeit">
     </div>
 </section>
+
+<div class="section-divider mauer" aria-hidden="true"></div>
 
 <section id="leistungen" class="leistungen">
     <h2>Leistungen</h2>
@@ -287,6 +351,8 @@
         <li>Kellertrockenlegung (optional)</li>
     </ul>
 </section>
+
+<div class="section-divider mauer" aria-hidden="true"></div>
 
 <section id="arbeiten">
     <h2>Einblicke in meine Arbeit</h2>
@@ -310,6 +376,8 @@
         <div class="galerie-item"><img src="bilder/arbeit-16.jpg" alt="Arbeit 16"></div>
     </div>
 </section>
+
+<div class="section-divider mauer" aria-hidden="true"></div>
 
 <section id="kontakt" class="kontakt">
     <h2>Kontakt</h2>
