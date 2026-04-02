@@ -1,159 +1,445 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maurerbetrieb Mario Timm – Sanierung & Reparatur in Tornesch & Umgebung</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maurerbetrieb Mario Timm – Sanierung & Reparatur in Tornesch & Umgebung</title>
 
-<style>
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #2E3A45;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 1000;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-    padding-top: 60px;
-}
-
-header {
-    background: #2E3A45;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.header-logo img {
-    width: min(96vw, 680px);
-}
-
-section {
-    padding: 56px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-h2 {
-    text-align: center;
-    color: #2E3A45;
-}
-
-/* --- NEUER SKIZZEN-DIVIDER --- */
-.section-divider {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section-divider.mauer {
-    height: 42px;
-    position: relative;
-    opacity: 0.95;
-}
-
-.section-divider.mauer::before,
-.section-divider.mauer::after {
-    content: "";
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    border-radius: 8px;
-    background-repeat: repeat-x;
-    background-size: 72px 16px;
-}
-
-.section-divider.mauer::before {
-    top: 4px;
-    height: 16px;
-    background-image:
-        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='16'><rect x='1' y='2' width='33' height='11' rx='2' fill='%23d8cec0' stroke='%23b7ab9b' stroke-width='1.2'/><rect x='37' y='1' width='30' height='12' rx='2' fill='%23e2d8ca' stroke='%23b7ab9b' stroke-width='1.2'/></svg>");
-}
-
-.section-divider.mauer::after {
-    top: 22px;
-    height: 16px;
-    left: 52px;
-    background-image:
-        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='16'><rect x='2' y='1' width='28' height='12' rx='2' fill='%23e0d5c7' stroke='%23b7ab9b' stroke-width='1.2'/><rect x='34' y='2' width='35' height='11' rx='2' fill='%23d6cabd' stroke='%23b7ab9b' stroke-width='1.2'/></svg>");
-}
-
-@media (max-width: 500px) {
-    .section-divider.mauer {
-        height: 34px;
+    <style>
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #2E3A45;
+        text-align: center;
+        padding: 10px 0;
+        align-items: center;
+        z-index: 1000;
     }
-}
-/* --- ENDE DIVIDER --- */
 
-.galerie {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-</style>
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        letter-spacing: 0.2px;
+        color: #333;
+        padding-top: 60px;
+        background: #fff;
+    }
+
+    header {
+        background: #2E3A45;
+        color: white;
+        padding: 20px 15px 18px;
+        text-align: center;
+    }
+
+    .header-logo {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .header-logo img {
+        width: min(96vw, 680px);
+        height: auto;
+        display: block;
+    }
+
+    header h1 {
+        font-size: clamp(20px, 4vw, 26px);
+        line-height: 1.2;
+        margin: 8px 0 8px 0;
+    }
+
+    header p {
+        font-size: clamp(14px, 2.5vw, 18px);
+        margin: 6px 0 12px 0;
+    }
+
+    section {
+        padding: 56px 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: clamp(20px, 3vw, 24px);
+        margin-bottom: 18px;
+        color: #2E3A45;
+    }
+
+    /* Divider im Stil der Referenz: handgezeichnete Mauer */
+    .section-divider {
+        max-width: 900px;
+        margin: 6px auto;
+        padding: 0 20px;
+    }
+
+    .section-divider.mauer {
+        height: 84px;
+        position: relative;
+        opacity: 0.96;
+    }
+
+    .section-divider.mauer::before,
+    .section-divider.mauer::after {
+        content: "";
+        position: absolute;
+        background-repeat: repeat-x;
+        background-position: left top;
+    }
+
+    .section-divider.mauer::before {
+        left: 20px;
+        right: 20px;
+        top: 2px;
+        height: 36px;
+        background-size: 390px 36px;
+        background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='390' height='36' viewBox='0 0 390 36'>\
+<rect width='390' height='36' fill='none'/>\
+<g fill='none' stroke='%232e2e2e' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'>\
+<path d='M3 31 L4 9 L7 6 L76 6 L79 8 L79 29 L76 31 L4 31'/>\
+<path d='M81 30 L82 8 L85 6 L153 6 L156 8 L156 30 L153 31 L83 31'/>\
+<path d='M159 31 L160 8 L163 6 L231 6 L234 8 L234 30 L231 31 L161 31'/>\
+<path d='M237 31 L238 8 L241 6 L309 6 L312 8 L312 30 L309 31 L239 31'/>\
+<path d='M315 31 L316 8 L319 6 L387 6 L389 9 L388 30 L385 31 L317 31'/>\
+<path d='M8 17 l3 -2' opacity='0.65'/>\
+<path d='M29 27 l2 -3' opacity='0.65'/>\
+<path d='M102 7 l4 2' opacity='0.55'/>\
+<path d='M126 6 l6 0' opacity='0.5'/>\
+<path d='M203 8 l4 -1' opacity='0.55'/>\
+<path d='M266 6 l5 0' opacity='0.55'/>\
+<path d='M341 7 l4 1' opacity='0.55'/>\
+</g>\
+</svg>");
+    }
+
+    .section-divider.mauer::after {
+        left: 58px;
+        right: 20px;
+        top: 39px;
+        height: 34px;
+        background-size: 390px 34px;
+        background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='390' height='34' viewBox='0 0 390 34'>\
+<rect width='390' height='34' fill='none'/>\
+<g fill='none' stroke='%232e2e2e' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'>\
+<path d='M2 28 L3 8 L5 6 L46 6 L48 8 L48 27 L45 29 L4 29'/>\
+<path d='M51 28 L52 8 L55 6 L126 6 L129 8 L128 27 L125 29 L53 29'/>\
+<path d='M132 29 L133 8 L136 6 L203 6 L206 8 L206 27 L203 29 L134 29'/>\
+<path d='M209 29 L210 8 L213 6 L281 6 L284 8 L284 27 L281 29 L211 29'/>\
+<path d='M287 29 L288 8 L291 6 L359 6 L362 8 L362 27 L359 29 L289 29'/>\
+<path d='M365 29 L366 8 L369 6 L387 6 L389 8 L389 27 L387 29 L367 29'/>\
+<path d='M12 14 l3 -2' opacity='0.55'/>\
+<path d='M72 16 l5 -2' opacity='0.55'/>\
+<path d='M165 15 l8 -3' opacity='0.55'/>\
+<path d='M222 17 l5 -1' opacity='0.55'/>\
+<path d='M334 15 l6 -2' opacity='0.55'/>\
+</g>\
+</svg>");
+    }
+
+    .leistungen ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .leistungen li {
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .galerie {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .galerie-item {
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .galerie img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .galerie-item:hover img {
+        transform: scale(1.08);
+    }
+
+    .kontakt {
+        text-align: center;
+    }
+
+    .kontakt a {
+        color: #2E3A45;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .kontakt a:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        background: #2E3A45;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    @media (hover: hover) {
+        footer a {
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    footer .credits {
+        color: #8FA3AD;
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    a.button {
+        background: #2E3A45;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 24px;
+        margin-bottom: 20px;
+    }
+
+    .ueber-mich-bild {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+    }
+
+    .ueber-text {
+        flex: 1;
+    }
+
+    .ueber-bild {
+        flex: 0 0 240px;
+    }
+
+    .ueber-bild img {
+        width: 100%;
+        max-width: 240px;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        object-position: center 10%;
+        transform: scale(1.03);
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    }
+
+    @media (max-width: 900px) {
+        .galerie {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 500px) {
+        .ueber-mich-bild {
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .ueber-bild img {
+            max-width: 220px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5px;
+            text-align: unset;
+        }
+
+        nav a {
+            margin: 0;
+            font-size: 13px;
+            flex: 1;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+        .section-divider.mauer {
+            height: 62px;
+        }
+
+        .section-divider.mauer::before {
+            height: 27px;
+            background-size: 292px 27px;
+        }
+
+        .section-divider.mauer::after {
+            top: 30px;
+            left: 42px;
+            height: 25px;
+            background-size: 292px 25px;
+        }
+    }
+    </style>
 </head>
-
 <body>
 
 <nav>
-<a href="#ueber">Über mich</a>
-<a href="#leistungen">Leistungen</a>
-<a href="#arbeiten">Arbeiten</a>
-<a href="#kontakt">Kontakt</a>
+    <a href="#ueber">Über mich</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#arbeiten">Arbeiten</a>
+    <a href="#kontakt">Kontakt</a>
 </nav>
 
 <header>
-<div class="header-logo">
-<img src="bilder/logo.png" alt="Logo">
-</div>
-<h1>Zuverlässig · Professionell · Regional</h1>
+    <div class="header-logo">
+        <img src="bilder/logo.png" alt="Logo Mario Timm">
+    </div>
+
+    <h1>Zuverlässig · Professionell · Regional</h1>
+    <a class="button" href="tel:01735339895" style="background:white;color:#2E3A45;"><svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#d40000" d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24c1.12.37 2.33.57 3.59.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.26.2 2.47.57 3.59a1 1 0 0 1-.24 1l-2.21 2.2Z"/></svg>Jetzt anrufen</a>
 </header>
 
-<section id="ueber">
-<h2>Über mich</h2>
-<p>Ich bin Mario Timm, Maurer mit über 25 Jahren Erfahrung.</p>
+<section id="ueber" class="ueber-mich-bild">
+    <div class="ueber-text">
+        <h2>Über mich</h2>
+        <p>
+            Ich bin Mario Timm, Maurer mit über 25 Jahren Erfahrung in Sanierung und Modernisierung.
+            Qualität ist mir besonders wichtig. Ich arbeite mit einem hohen Anspruch an saubere und langlebige Ergebnisse –
+            für Privatkunden, Hausverwaltungen und kleine Unternehmen in Tornesch, Pinneberg und Umgebung.
+        </p>
+    </div>
+    <div class="ueber-bild">
+        <img src="bilder/mario-sw.png" alt="Mario Timm bei der Arbeit">
+    </div>
 </section>
 
-<div class="section-divider mauer"></div>
+<div class="section-divider mauer" aria-hidden="true"></div>
 
-<section id="leistungen">
-<h2>Leistungen</h2>
-<ul>
-<li>Badsanierungen</li>
-<li>Mauerarbeiten</li>
-</ul>
+<section id="leistungen" class="leistungen">
+    <h2>Leistungen</h2>
+    <ul>
+        <li>Badsanierungen</li>
+        <li>Mauer- und Putzarbeiten</li>
+        <li>Rohbau & Umbau</li>
+        <li>Fliesenarbeiten</li>
+        <li>Außenmauern, Gartenmauern, Terrassen</li>
+        <li>Kellertrockenlegung (optional)</li>
+    </ul>
 </section>
 
-<div class="section-divider mauer"></div>
+<div class="section-divider mauer" aria-hidden="true"></div>
 
 <section id="arbeiten">
-<h2>Arbeiten</h2>
-<div class="galerie">
-<img src="bilder/arbeit-1.jpg">
-<img src="bilder/arbeit-2.jpg">
-</div>
+    <h2>Einblicke in meine Arbeit</h2>
+
+    <div class="galerie">
+        <div class="galerie-item"><img src="bilder/arbeit-1.jpg" alt="Arbeit 1"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-2.jpg" alt="Arbeit 2"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-3.jpg" alt="Arbeit 3"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-4.jpg" alt="Arbeit 4"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-5.jpg" alt="Arbeit 5"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-6.jpg" alt="Arbeit 6"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-7.jpg" alt="Arbeit 7"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-8.jpg" alt="Arbeit 8"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-9.jpg" alt="Arbeit 9"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-10.jpg" alt="Arbeit 10"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-11.jpg" alt="Arbeit 11"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-12.jpg" alt="Arbeit 12"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-13.jpg" alt="Arbeit 13"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-14.jpg" alt="Arbeit 14"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-15.jpg" alt="Arbeit 15"></div>
+        <div class="galerie-item"><img src="bilder/arbeit-16.jpg" alt="Arbeit 16"></div>
+    </div>
 </section>
 
-<div class="section-divider mauer"></div>
+<div class="section-divider mauer" aria-hidden="true"></div>
 
-<section id="kontakt">
-<h2>Kontakt</h2>
-<p>0173 533 9895</p>
+<section id="kontakt" class="kontakt">
+    <h2>Kontakt</h2>
+
+    <p>
+        <svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#d40000" d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24c1.12.37 2.33.57 3.59.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.26.2 2.47.57 3.59a1 1 0 0 1-.24 1l-2.21 2.2Z"/>
+        </svg>
+        <a href="tel:01735339895">0173 533 9895</a>
+    </p>
+
+    <p>
+        <svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#2E3A45" d="M20 4H4a2 2 0 0 0-2 2v.01L12 13l10-6.99V6a2 2 0 0 0-2-2Zm0 4.24L12 15 4 8.24V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.24Z"/>
+        </svg>
+        <a href="mailto:timmmario@yahoo.de?subject=Anfrage%20über%20Website">timmmario@yahoo.de</a>
+    </p>
+
+    <a class="button" href="https://wa.me/491735339895">
+        <svg viewBox="0 0 32 32" width="18" height="18" style="vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#25D366" d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.89.756 5.606 2.073 7.97L0 32l7.854-2.058A15.92 15.92 0 0 0 16 32c8.836 0 16-7.164 16-16.396C32 7.56 24.836.396 16 .396Zm0 29.09c-2.566 0-5.064-.69-7.23-1.995l-.518-.308-4.66 1.22 1.245-4.54-.336-.524A13.44 13.44 0 0 1 2.56 16.396C2.56 8.88 8.484 2.956 16 2.956s13.44 5.924 13.44 13.44-5.924 13.44-13.44 13.44Zm7.36-9.98c-.402-.2-2.38-1.176-2.75-1.31-.37-.134-.64-.2-.91.2-.268.402-1.044 1.31-1.28 1.58-.236.268-.47.302-.87.1-.402-.2-1.7-.626-3.24-1.994-1.198-1.066-2.006-2.382-2.24-2.784-.236-.402-.025-.62.177-.82.18-.178.402-.47.604-.704.2-.236.268-.402.402-.67.134-.268.067-.502-.033-.704-.1-.2-.91-2.196-1.246-3.01-.327-.785-.66-.678-.91-.69l-.78-.014c-.268 0-.704.1-1.072.502-.37.402-1.41 1.378-1.41 3.356 0 1.978 1.444 3.888 1.646 4.156.2.268 2.844 4.344 6.892 6.09.964.416 1.716.664 2.304.85.968.308 1.85.264 2.546.16.776-.116 2.38-.972 2.714-1.91.336-.938.336-1.744.236-1.91-.1-.166-.37-.268-.772-.47Z"/>
+        </svg>
+        WhatsApp schreiben
+    </a>
 </section>
+
+<footer>
+  <p>
+    © 2026 Maurerbetrieb Mario Timm · 
+    <a href="impressum.html">Impressum</a> · 
+    <a href="datenschutz.html">Datenschutz</a>
+  </p>
+  <p class="credits">
+    Webdesign: S. Kreckler
+  </p>
+</footer>
 
 </body>
 </html>
