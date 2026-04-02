@@ -3,71 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maurerbetrieb Mario Timm – filigrane Skizzen-Mauer</title>
+<title>Maurerbetrieb Mario Timm – mit Illustration Divider</title>
 
 <style>
-body{margin:0;font-family:Arial,sans-serif;padding-top:60px;color:#333}
-nav{position:fixed;top:0;width:100%;background:#2E3A45;text-align:center;padding:10px 0;z-index:1000}
-nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold}
-header{background:#2E3A45;color:#fff;text-align:center;padding:20px}
-.header-logo img{width:min(96vw,680px)}
-section{padding:56px 20px;max-width:900px;margin:auto}
-h2{text-align:center;color:#2E3A45}
-
-/* FEINERE MAUER */
-.section-divider{max-width:900px;margin:2px auto;padding:0 20px}
-.section-divider.mauer{height:56px;position:relative;opacity:.9}
-
-.section-divider.mauer::before,
-.section-divider.mauer::after{
-content:"";
-position:absolute;
-left:20px;
-right:20px;
-background-repeat:repeat-x;
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #2E3A45;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
 }
 
-.section-divider.mauer::before{
-top:0;
-height:24px;
-background-size:320px 24px;
-background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='24'><g fill='none' stroke='%232b2b2b' stroke-width='1.2' stroke-linecap='round'><path d='M2 20 L3 5 L6 4 L62 4 L64 6 L64 19 L62 20 L3 20'/><path d='M67 20 L68 5 L71 4 L126 4 L128 6 L128 19 L126 20 L69 20'/></g></svg>");
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.section-divider.mauer::after{
-top:22px;
-left:40px;
-height:22px;
-background-size:320px 22px;
-background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='22'><g fill='none' stroke='%232b2b2b' stroke-width='1.2' stroke-linecap='round'><path d='M2 18 L3 5 L5 4 L48 4 L49 6 L49 17 L47 18 L3 18'/></g></svg>");
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
+    color: #333;
 }
 
-@media(max-width:500px){
-.section-divider.mauer{height:44px}
+header {
+    background: #2E3A45;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
+
+.header-logo img {
+    width: min(96vw, 680px);
+}
+
+section {
+    padding: 56px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #2E3A45;
+}
+
+/* Illustration Divider */
+.section-divider {
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 0 20px;
+}
+
+.section-divider.mauer {
+    height: 90px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 90'><g fill='none' stroke='%23222222' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='10' width='160' height='30' rx='3'/><rect x='180' y='8' width='170' height='32' rx='3'/><rect x='360' y='10' width='160' height='30' rx='3'/><rect x='530' y='9' width='170' height='31' rx='3'/><rect x='710' y='10' width='170' height='30' rx='3'/><rect x='60' y='42' width='150' height='28' rx='3'/><rect x='220' y='44' width='170' height='26' rx='3'/><rect x='400' y='42' width='150' height='28' rx='3'/><rect x='560' y='44' width='170' height='26' rx='3'/><rect x='740' y='42' width='130' height='28' rx='3'/><path d='M30 20 l6 -2'/><path d='M200 25 l5 -2'/><path d='M420 22 l6 -2'/><path d='M600 24 l5 -2'/></g><g transform='rotate(-12 450 40)'><rect x='420' y='25' width='120' height='18' rx='3' fill='none' stroke='%23222222' stroke-width='1.4'/><rect x='535' y='22' width='30' height='24' rx='4' fill='none' stroke='%23222222' stroke-width='1.4'/></g></svg>");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.85;
+}
+
 </style>
 </head>
+
 <body>
 
 <nav>
-<a href="#">Über mich</a>
-<a href="#">Leistungen</a>
-<a href="#">Arbeiten</a>
-<a href="#">Kontakt</a>
+<a href="#ueber">Über mich</a>
+<a href="#leistungen">Leistungen</a>
+<a href="#arbeiten">Arbeiten</a>
+<a href="#kontakt">Kontakt</a>
 </nav>
 
 <header>
-<div class="header-logo"><img src="bilder/logo.png"></div>
+<div class="header-logo">
+<img src="bilder/logo.png" alt="Logo">
+</div>
 <h1>Zuverlässig · Professionell · Regional</h1>
 </header>
 
-<section><h2>Über mich</h2></section>
+<section id="ueber">
+<h2>Über mich</h2>
+<p>Ich bin Mario Timm, Maurer mit über 25 Jahren Erfahrung.</p>
+</section>
+
 <div class="section-divider mauer"></div>
-<section><h2>Leistungen</h2></section>
+
+<section id="leistungen">
+<h2>Leistungen</h2>
+<p>Inhalte…</p>
+</section>
+
 <div class="section-divider mauer"></div>
-<section><h2>Arbeiten</h2></section>
+
+<section id="arbeiten">
+<h2>Arbeiten</h2>
+<p>Galerie…</p>
+</section>
+
 <div class="section-divider mauer"></div>
-<section><h2>Kontakt</h2></section>
+
+<section id="kontakt">
+<h2>Kontakt</h2>
+<p>Kontaktinfos…</p>
+</section>
 
 </body>
 </html>
