@@ -3,156 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maurerbetrieb Mario Timm – Sanierung & Reparatur in Tornesch & Umgebung</title>
+<title>Maurerbetrieb Mario Timm – mit Zollstock Divider</title>
 
 <style>
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #2E3A45;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 1000;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-}
-
 body {
-    margin: 0;
+    margin:0;
     font-family: Arial, sans-serif;
-    color: #333;
-    padding-top: 60px;
-}
-
-header {
-    background: #2E3A45;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.header-logo img {
-    width: min(96vw, 680px);
 }
 
 section {
-    padding: 56px 20px;
-    max-width: 900px;
-    margin: auto;
+    padding:56px 20px;
+    max-width:900px;
+    margin:auto;
 }
 
 h2 {
-    text-align: center;
-    color: #2E3A45;
+    text-align:center;
 }
 
-/* --- NEUER SKIZZEN-DIVIDER --- */
+/* Eleganter Zollstock Divider */
 .section-divider {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width:900px;
+    margin:20px auto;
+    padding:0 20px;
 }
 
-.section-divider.mauer {
-    height: 42px;
-    position: relative;
-    opacity: 0.95;
+.section-divider.zollstock {
+    height:26px;
+    position:relative;
+    opacity:0.85;
 }
 
-.section-divider.mauer::before,
-.section-divider.mauer::after {
-    content: "";
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    border-radius: 8px;
-    background-repeat: repeat-x;
-    background-size: 72px 16px;
+.section-divider.zollstock::before {
+    content:"";
+    display:block;
+    height:8px;
+    border-radius:4px;
+    background:
+    repeating-linear-gradient(
+        to right,
+        #f4e28a 0px,
+        #f4e28a 20px,
+        #2E3A45 20px,
+        #2E3A45 22px
+    );
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
 }
 
-.section-divider.mauer::before {
-    top: 4px;
-    height: 16px;
-    background-image:
-        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='16'><rect x='1' y='2' width='33' height='11' rx='2' fill='%23d8cec0' stroke='%23b7ab9b' stroke-width='1.2'/><rect x='37' y='1' width='30' height='12' rx='2' fill='%23e2d8ca' stroke='%23b7ab9b' stroke-width='1.2'/></svg>");
+/* feine Striche wie Maß-Markierungen */
+.section-divider.zollstock::after {
+    content:"";
+    position:absolute;
+    top:2px;
+    left:20px;
+    right:20px;
+    height:16px;
+    background:
+    repeating-linear-gradient(
+        to right,
+        transparent 0px,
+        transparent 9px,
+        rgba(0,0,0,0.4) 9px,
+        rgba(0,0,0,0.4) 10px
+    );
+    opacity:0.4;
 }
 
-.section-divider.mauer::after {
-    top: 22px;
-    height: 16px;
-    left: 52px;
-    background-image:
-        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='16'><rect x='2' y='1' width='28' height='12' rx='2' fill='%23e0d5c7' stroke='%23b7ab9b' stroke-width='1.2'/><rect x='34' y='2' width='35' height='11' rx='2' fill='%23d6cabd' stroke='%23b7ab9b' stroke-width='1.2'/></svg>");
-}
-
-@media (max-width: 500px) {
-    .section-divider.mauer {
-        height: 34px;
+@media (max-width:500px) {
+    .section-divider.zollstock {
+        height:22px;
     }
-}
-/* --- ENDE DIVIDER --- */
-
-.galerie {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-<a href="#ueber">Über mich</a>
-<a href="#leistungen">Leistungen</a>
-<a href="#arbeiten">Arbeiten</a>
-<a href="#kontakt">Kontakt</a>
-</nav>
-
-<header>
-<div class="header-logo">
-<img src="bilder/logo.png" alt="Logo">
-</div>
-<h1>Zuverlässig · Professionell · Regional</h1>
-</header>
-
-<section id="ueber">
+<section>
 <h2>Über mich</h2>
-<p>Ich bin Mario Timm, Maurer mit über 25 Jahren Erfahrung.</p>
+<p>Inhalt...</p>
 </section>
 
-<div class="section-divider mauer"></div>
+<div class="section-divider zollstock"></div>
 
-<section id="leistungen">
+<section>
 <h2>Leistungen</h2>
-<ul>
-<li>Badsanierungen</li>
-<li>Mauerarbeiten</li>
-</ul>
+<p>Inhalt...</p>
 </section>
 
-<div class="section-divider mauer"></div>
+<div class="section-divider zollstock"></div>
 
-<section id="arbeiten">
+<section>
 <h2>Arbeiten</h2>
-<div class="galerie">
-<img src="bilder/arbeit-1.jpg">
-<img src="bilder/arbeit-2.jpg">
-</div>
+<p>Inhalt...</p>
 </section>
 
-<div class="section-divider mauer"></div>
+<div class="section-divider zollstock"></div>
 
-<section id="kontakt">
+<section>
 <h2>Kontakt</h2>
-<p>0173 533 9895</p>
+<p>Inhalt...</p>
 </section>
 
 </body>
