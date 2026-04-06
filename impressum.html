@@ -119,6 +119,17 @@ a.button {
         padding: 20px 16px 30px 16px;
     }
 }
+
+/* Kontakt-Links: klickbar + Underline bei Hover/Active */
+.container a {
+    color: #2E3A45;
+    text-decoration: none;
+}
+.container a:hover,
+.container a:active {
+    text-decoration: underline;
+}
+
 </style>
 </head>
 
@@ -146,8 +157,8 @@ a.button {
   <h2>Kontakt</h2>
 
   <p>
-  Telefon: 0173 533 9895<br>
-  E-Mail: timmmario@yahoo.de
+  Telefon: <a href="tel:01735339895">0173 533 9895</a><br>
+  E-Mail: <a href="mailto:timmmario@yahoo.de">timmmario@yahoo.de</a>
   </p>
 
   <h2><font color="red">Umsatzsteuer-ID</font></h2>
